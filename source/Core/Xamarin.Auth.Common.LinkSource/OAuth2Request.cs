@@ -13,8 +13,10 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 //
+using Java.Net;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using Xamarin.Auth;
 
 #if ! AZURE_MOBILE_SERVICES
@@ -124,6 +126,15 @@ namespace Xamarin.Auth._MobileServices
             }
 
             return "Bearer " + account.Properties["access_token"];
+        }
+
+        protected override HttpRequestMessage GetPreparedWebRequest()
+        {
+            HttpRequestMessage request = base.GetPreparedWebRequest();
+            string accessToken = this.Account.Properties[this.AccessTokenParameterName];
+            accessToken = URLEncoder.Encode(accessToken, "UTF-8");
+            request.Headers.Add("Authorization", accessToken);
+            return request;
         }
     }
 }

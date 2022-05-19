@@ -850,7 +850,7 @@ namespace Xamarin.Auth._MobileServices
             {
                 { "grant_type", "authorization_code" },
                 { "code", code },
-                { "redirect_uri", redirectUrl.AbsoluteUri },
+                { "redirect_uri", redirectUrl.OriginalString },
                 { "client_id", clientId },
             };
             if (!string.IsNullOrEmpty(clientSecret))

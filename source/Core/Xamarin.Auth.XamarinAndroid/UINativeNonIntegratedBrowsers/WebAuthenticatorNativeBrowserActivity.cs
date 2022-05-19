@@ -282,7 +282,7 @@ namespace Xamarin.Auth._MobileServices
 
                             if (msg != null)
                             {
-                                Toast.MakeText(this, msg, ToastLength.Short).Show();
+                                Toast.MakeText(this, msg, ToastLength.Long).Show();
                             }
                         }
                     );
