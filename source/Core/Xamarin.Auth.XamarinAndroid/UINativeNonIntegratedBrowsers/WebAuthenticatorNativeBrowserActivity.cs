@@ -20,7 +20,7 @@ using System.Linq;
 using Android.OS;
 using Android.App;
 using Android.Widget;
-using Android.Support.CustomTabs;
+using AndroidX.Browser.CustomTabs;
 using Xamarin.Utilities.Android;
 
 using Plugin.Threading;

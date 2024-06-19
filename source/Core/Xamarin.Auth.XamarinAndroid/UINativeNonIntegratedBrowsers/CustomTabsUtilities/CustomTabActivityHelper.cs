@@ -19,7 +19,7 @@ using Android.App;
 using Android.Net;
 using Android.OS;
 using Android.Widget;
-using Android.Support.CustomTabs;
+using AndroidX.Browser.CustomTabs;
 using Xamarin.Auth;
 
 #if !AZURE_MOBILE_SERVICES
